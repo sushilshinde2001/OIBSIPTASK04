@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/brain"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QuizPractice"
+        tools:targetApi="31">
+        <activity
+            android:name=".HomeActivity"
+            android:label="Welcome to Quiz"
+            android:exported="false" />
+        <activity
+            android:name=".MathematicQuizz"
+            android:label="Mathematics Quiz"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:noHistory="true"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ScoreCardActivity"
+
+            android:exported="false"
+            android:label="Score Card"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".HomeActivity"
+            android:label="General Knowledge Quiz"
+            android:exported="true" />
+    </application>
+
+</manifest>
